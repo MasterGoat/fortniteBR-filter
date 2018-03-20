@@ -1,37 +1,58 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/MasterGoat/fortniteBR-filter/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+<!DOCTYPE html>
+<html>
+<head>
+	<title>/r/FortniteBR Filtering System</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="code.js"></script>
+	<link rel="stylesheet" type="text/css" href="css.min.css">
+</head>
+<body>
+<div id="loading">
+	<h1>Filtering subreddit posts...</h1>
+</div>
+<div id="debug">
+	<table>
+		<thead>
+			<tr>
+				<th>Highlight</th>
+				<th>eSports</th>
+				<th>Console</th>
+				<th>Fan Content</th>
+				<th>Humor</th>
+				<th>News Article</th>
+				<th>Result Binary</th>
+				<th>Result Mask</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input checked type="checkbox" /></td>
+				<td><input checked type="checkbox" /></td>
+				<td><input checked type="checkbox" /></td>
+				<td><input checked type="checkbox" /></td>
+				<td><input checked type="checkbox" /></td>
+				<td><input checked type="checkbox" /></td>
+				<td><input id="binary" /></td><td><input id="mask" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<hr>
+	<label for="referrer">Document Referrer</label>
+	<input type="text" id="ref" /><br>
+	<label for="referrer">Hide Request</label>
+	<input type="text" id="request" value="foo.com/?hide=highlight"/><br>
+	<button onclick="window.location.replace('https://ow-'+newMask+'.reddit.com/r/OverwatchCSS');">Go</button>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  ga('create', 'UA-73740325-2', 'auto');
+  ga('send', 'pageview');
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MasterGoat/fortniteBR-filter/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+</script>
+</body>
+</html>
