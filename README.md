@@ -1,12 +1,9 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>/r/FortniteBR Filtering System</title>
+title: /r/FortniteBR Filtering System
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script type="text/javascript" src="code.js"></script>
 	<link rel="stylesheet" type="text/css" href="css.min.css">
-</head>
 <body>
 <div id="loading">
 	<h1>Filtering subreddit posts...</h1>
@@ -15,12 +12,12 @@
 	<table>
 		<thead>
 			<tr>
-				<th>Highlight</th>
-				<th>eSports</th>
-				<th>Console</th>
-				<th>Fan Content</th>
+				<th>Bug</th>
+				<th>Discussion</th>
+				<th>Help</th>
+				<th>Media</th>
+				<th>Creative</th>
 				<th>Humor</th>
-				<th>News Article</th>
 				<th>Result Binary</th>
 				<th>Result Mask</th>
 			</tr>
