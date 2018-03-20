@@ -24,14 +24,14 @@ function calcMask() {
 	mask = subdomain.split('-')[1];
 	console.log("Mask: " + mask);
 
-	sombraStatus = subdomain.split('-')[0];
-	console.log("Sombra Status: " + sombraStatus);
+	filterStatus = subdomain.split('-')[0];
+	console.log("Filter Status: " + filterStatus);
 
 	request = $('#request').val().split('#')[1];
 	console.log("Request: " + request);
 
-	if (request == 'sombraToggle') {
-		console.log('Sombra Toggle requested. Aborting further claculations.');
+	if (request == 'filterToggle') {
+		console.log('Filter Toggle requested. Aborting further calculations.');
 		return;
 	}
 
@@ -111,38 +111,38 @@ $(document).ready(function() {
 
 	calcMask();
 
-	if (request == 'sombraToggle') {
-		console.log('calculating sombra toggle');
+	if (request == 'filterToggle') {
+		console.log('calculating filter toggle');
 		if (isNaN(mask)) {
-			console.log('no mask detected, toggling sombra via default subreddit');
-			if (sombraStatus == 'ns') {
-				console.log('Current Sombra status read as filtered');
-				window.location.replace('https://reddit.com/r/Overwatch');
+			console.log('no mask detected, toggling filter via default subreddit');
+			if (sombraStatus == 'fn') {
+				console.log('Current Filter status read as filtered');
+				window.location.replace('https://reddit.com/r/FortniteBR');
 			}
 			else {
-				console.log('Current Sombra status read as UNfiltered');
-				window.location.replace('https://ns.reddit.com/r/Overwatch');
+				console.log('Current Filter status read as UNfiltered');
+				window.location.replace('https://fn.reddit.com/r/FortniteBR');
 			}
 		}
-		else if (sombraStatus == 'ns') {
-			console.log('Current Sombra status read as filtered');
-			window.location.replace('https://ow-'+mask+'.reddit.com/r/Overwatch');
+		else if (sombraStatus == 'fn') {
+			console.log('Current Filter status read as filtered');
+			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortniteBR');
 		}
 		else {
-			console.log('Current Sombra status read as UNfiltered');
-			window.location.replace('https://ns-'+mask+'.reddit.com/r/Overwatch');
+			console.log('Current Filter status read as UNfiltered');
+			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortniteBR');
 		}
 	}
 	else {
-		if (subdomain.split('-')[0] == 'ns') {
+		if (subdomain.split('-')[0] == 'fn') {
 			if (newMask == '00' || newMask == 0 || newMask == 63) {
-				window.location.replace('https://ns.reddit.com/r/Overwatch');
+				window.location.replace('https://fn.reddit.com/r/FortniteBR');
 			}
-			else { 	window.location.replace('https://ns-'+newMask+'.reddit.com/r/Overwatch'); }
+			else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortniteBR'); }
 		}
 		else if (newMask == '00' || newMask == 0 || newMask == 63) {
-			window.location.replace('https://reddit.com/r/Overwatch');
+			window.location.replace('https://reddit.com/r/FortniteBR');
 		}
-		else { 	window.location.replace('https://ow-'+newMask+'.reddit.com/r/Overwatch'); }
+		else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortniteBR'); }
 	}
 });
