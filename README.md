@@ -1,1 +1,55 @@
-## This is a github host for a post filter on /r/FortniteBR
+<!DOCTYPE html>
+<html>
+<head>
+	<title>/r/FortniteBR Filtering System</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="code.js"></script>
+	<link rel="stylesheet" type="text/css" href="css.min.css">
+</head>
+<body>
+<div id="loading">
+	<h1>Filtering subreddit posts...</h1>
+</div>
+<div id="debug">
+	<table>
+		<thead>
+			<tr>
+				<th>Bug</th>
+				<th>Discussion</th>
+				<th>Help</th>
+				<th>Media</th>
+				<th>Creative</th>
+				<th>Humor</th>
+				<th>Result Binary</th>
+				<th>Result Mask</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input checked type="checkbox" /></td>
+				<td><input checked type="checkbox" /></td>
+				<td><input checked type="checkbox" /></td>
+				<td><input checked type="checkbox" /></td>
+				<td><input checked type="checkbox" /></td>
+				<td><input checked type="checkbox" /></td>
+				<td><input id="binary" /></td><td><input id="mask" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<hr>
+	<label for="referrer">Document Referrer</label>
+	<input type="text" id="ref" /><br>
+	<label for="referrer">Hide Request</label>
+	<input type="text" id="request" value="foo.com/?hide=highlight"/><br>
+	<button onclick="window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortNiteBRCSS');">Go</button>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-73740325-2', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
