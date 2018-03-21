@@ -115,7 +115,7 @@ $(document).ready(function() {
 		console.log('calculating filter toggle');
 		if (isNaN(mask)) {
 			console.log('no mask detected, toggling filter via default subreddit');
-			if (sombraStatus == 'fn') {
+			if (filterStatus == 'fn') {
 				console.log('Current Filter status read as filtered');
 				window.location.replace('https://reddit.com/r/FortniteBR');
 			}
@@ -124,7 +124,7 @@ $(document).ready(function() {
 				window.location.replace('https://fn.reddit.com/r/FortniteBR');
 			}
 		}
-		else if (sombraStatus == 'fn') {
+		else if (filterStatus == 'fn') {
 			console.log('Current Filter status read as filtered');
 			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortniteBR');
 		}
