@@ -117,11 +117,11 @@ $(document).ready(function() {
 			console.log('no mask detected, toggling filter via default subreddit');
 			if (filterStatus == 'fn') {
 				console.log('Current Filter status read as filtered');
-				window.location.replace('https://reddit.com/r/FortnightBRTest');
+				window.location.replace('https://www.reddit.com/r/FortnightBRTest');
 			}
 			else {
 				console.log('Current Filter status read as UNfiltered');
-				window.location.replace('https://fn.reddit.com/r/FortnightBRTest');
+				window.location.replace('https://www.reddit.com/r/FortnightBRTest');
 			}
 		}
 		else if (filterStatus == 'fn') {
@@ -136,12 +136,12 @@ $(document).ready(function() {
 	else {
 		if (subdomain.split('-')[0] == 'fn') {
 			if (newMask == '00' || newMask == 0 || newMask == 63) {
-				window.location.replace('https://fn.reddit.com/r/FortnightBRTest');
+				window.location.replace('https://www.reddit.com/r/FortnightBRTest');
 			}
 			else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortnightBRTest'); }
 		}
 		else if (newMask == '00' || newMask == 0 || newMask == 63) {
-			window.location.replace('https://reddit.com/r/FortnightBRTest');
+			window.location.replace('https://www.reddit.com/r/FortnightBRTest');
 		}
 		else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortnightBRTest'); }
 	}
