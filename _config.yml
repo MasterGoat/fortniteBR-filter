@@ -1,3 +1,5 @@
 title: /r/FortNiteBR Post Filter
 
 theme: jekyll-theme-modernist
+
+permalink: /filter/:title
