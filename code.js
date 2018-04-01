@@ -136,12 +136,12 @@ $(document).ready(function() {
 	else {
 		if (subdomain.split('-')[0] == 'fn') {
 			if (newMask == '00' || newMask == 0 || newMask == 63) {
-				window.location.replace('https://www.reddit.com/r/FortNiteBRTest');
+				window.location.replace('https://www.reddit.com/r/FortNiteBR');
 			}
 			else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortNiteBR'); }
 		}
 		else if (newMask == '00' || newMask == 0 || newMask == 63) {
-			window.location.replace('https://www.reddit.com/r/FortNiteBRTest');
+			window.location.replace('https://www.reddit.com/r/FortNiteBR');
 		}
 		else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortNiteBR'); }
 	}
