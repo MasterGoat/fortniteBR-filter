@@ -117,20 +117,20 @@ $(document).ready(function() {
 			console.log('no mask detected, toggling filter via default subreddit');
 			if (filterStatus == 'fn') {
 				console.log('Current Filter status read as filtered');
-				window.location.replace('https://www.reddit.com/r/FortNiteBRTest');
+				window.location.replace('https://www.reddit.com/r/FortNiteBR');
 			}
 			else {
 				console.log('Current Filter status read as UNfiltered');
-				window.location.replace('https://www.reddit.com/r/FortNiteBRTest');
+				window.location.replace('https://www.reddit.com/r/FortNiteBR');
 			}
 		}
 		else if (filterStatus == 'fn') {
 			console.log('Current Filter status read as filtered');
-			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortNiteBRTest');
+			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortNiteBR');
 		}
 		else {
 			console.log('Current Filter status read as UNfiltered');
-			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortNiteBRTest');
+			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortNiteBR');
 		}
 	}
 	else {
@@ -138,11 +138,11 @@ $(document).ready(function() {
 			if (newMask == '00' || newMask == 0 || newMask == 63) {
 				window.location.replace('https://www.reddit.com/r/FortNiteBRTest');
 			}
-			else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortNiteBRTest'); }
+			else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortNiteBR'); }
 		}
 		else if (newMask == '00' || newMask == 0 || newMask == 63) {
 			window.location.replace('https://www.reddit.com/r/FortNiteBRTest');
 		}
-		else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortNiteBRTest'); }
+		else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortNiteBR'); }
 	}
 });
