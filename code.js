@@ -2,6 +2,7 @@ var resultBinary = '000000';
 	var resultDec = 0;
 	var referrer;
 	var subdomain;
+        var subname;
 	var mask;
 	var newMask;
 	var request;
@@ -20,6 +21,9 @@ function calcMask() {
 
 	subdomain = referrer.split('.')[0].replace('http://', '').replace('https://', '');
 	console.log("Subdomain: " + subdomain);
+	
+	subname = referrer.split('/r/').replace('http://www.reddit.com/r/', '').replace('https://www.reddit.com/r/', '');
+	console.log("Subname: " + subname);
 
 	mask = subdomain.split('-')[1];
 	console.log("Mask: " + mask);
@@ -117,32 +121,32 @@ $(document).ready(function() {
 			console.log('no mask detected, toggling filter via default subreddit');
 			if (filterStatus == 'fn') {
 				console.log('Current Filter status read as filtered');
-				window.location.replace('https://www.reddit.com/r/FortNiteBR');
+				window.location.replace('https://www.reddit.com/r/'+subname+'');
 			}
 			else {
 				console.log('Current Filter status read as UNfiltered');
-				window.location.replace('https://www.reddit.com/r/FortNiteBR');
+				window.location.replace('https://www.reddit.com/r/'+subname+'');
 			}
 		}
 		else if (filterStatus == 'fn') {
 			console.log('Current Filter status read as filtered');
-			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortNiteBR');
+			window.location.replace('https://fn-'+mask+'.reddit.com/r/'+subname+'');
 		}
 		else {
 			console.log('Current Filter status read as UNfiltered');
-			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortNiteBR');
+			window.location.replace('https://fn-'+mask+'.reddit.com/r/'+subname+'');
 		}
 	}
 	else {
 		if (subdomain.split('-')[0] == 'fn') {
 			if (newMask == '00' || newMask == 0 || newMask == 63) {
-				window.location.replace('https://www.reddit.com/r/FortNiteBR');
+				window.location.replace('https://www.reddit.com/r/'+subname+'');
 			}
-			else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortNiteBR'); }
+			else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/'+subname+''); }
 		}
 		else if (newMask == '00' || newMask == 0 || newMask == 63) {
-			window.location.replace('https://www.reddit.com/r/FortNiteBR');
+			window.location.replace('https://www.reddit.com/r/'+subname+'');
 		}
-		else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortNiteBR'); }
+		else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/'+subname+''); }
 	}
 });
