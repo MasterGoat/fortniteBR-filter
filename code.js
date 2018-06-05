@@ -22,7 +22,7 @@ function calcMask() {
 	subdomain = referrer.split('.')[0].replace('http://', '').replace('https://', '');
 	console.log("Subdomain: " + subdomain);
 	
-	subname = referrer.split('/r/').replace('http://www.reddit.com/r/', '').replace('https://www.reddit.com/r/', '');
+	subname = $('#ref').val().split('/r/').replace('http://www.reddit.com/r/', '').replace('https://www.reddit.com/r/', '');
 	console.log("Subname: " + subname);
 
 	mask = subdomain.split('-')[1];
