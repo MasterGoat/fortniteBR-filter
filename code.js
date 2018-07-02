@@ -2,7 +2,6 @@ var resultBinary = '000000';
 	var resultDec = 0;
 	var referrer;
 	var subdomain;
-        var subname;
 	var mask;
 	var newMask;
 	var request;
@@ -18,9 +17,9 @@ function pad (str, max) {
 function calcMask() {
 	referrer = $('#ref').val();
 	console.log("Referrer: " + referrer);
-	
-	subname = $('#ref').val().split('/r/').replace('http://www.reddit.com/r/', '').replace('https://www.reddit.com/r/', '');
-	console.log("Subname: " + subname);
+
+	subdomain = referrer.split('.')[0].replace('http://', '').replace('https://', '');
+	console.log("Subdomain: " + subdomain);
 
 	mask = subdomain.split('-')[1];
 	console.log("Mask: " + mask);
@@ -118,32 +117,32 @@ $(document).ready(function() {
 			console.log('no mask detected, toggling filter via default subreddit');
 			if (filterStatus == 'fn') {
 				console.log('Current Filter status read as filtered');
-				window.location.replace('https://www.reddit.com/r/FortniteBR');
+				window.location.replace('https://www.reddit.com/r/FortNiteBR');
 			}
 			else {
 				console.log('Current Filter status read as UNfiltered');
-				window.location.replace('https://www.reddit.com/r/FortniteBR');
+				window.location.replace('https://www.reddit.com/r/FortNiteBR');
 			}
 		}
 		else if (filterStatus == 'fn') {
 			console.log('Current Filter status read as filtered');
-			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortniteBR');
+			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortNiteBR');
 		}
 		else {
 			console.log('Current Filter status read as UNfiltered');
-			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortniteBR');
+			window.location.replace('https://fn-'+mask+'.reddit.com/r/FortNiteBR');
 		}
 	}
 	else {
 		if (subdomain.split('-')[0] == 'fn') {
 			if (newMask == '00' || newMask == 0 || newMask == 63) {
-				window.location.replace('https://www.reddit.com/r/FortniteBR');
+				window.location.replace('https://www.reddit.com/r/FortNiteBR');
 			}
-			else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortniteBR'); }
+			else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortNiteBR'); }
 		}
 		else if (newMask == '00' || newMask == 0 || newMask == 63) {
-			window.location.replace('https://www.reddit.com/r/FortniteBR');
+			window.location.replace('https://www.reddit.com/r/FortNiteBR');
 		}
-		else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortniteBR'); }
+		else { 	window.location.replace('https://fn-'+newMask+'.reddit.com/r/FortNiteBR'); }
 	}
 });
